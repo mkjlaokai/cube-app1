@@ -1,0 +1,43 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@cube/cube-scripts": "0.17.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --single-quote --trailing-comma es5 --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@cube/commitlint-config-cube": "^0.2.1",
+    "commitlint": "^5.2.6",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.9.2"
+  },
+  "scripts": {
+    "build": "cd server && yarn build && cd ../ui && yarn build && cd .. && cp -r ui/build server/dist/",
+    "lint": "cd ui && yarn lint && cd ../server && yarn lint",
+    "test": "cd ui && yarn test --coverage && cd ../server && yarn test --coverage",
+    "precommit": "lint-staged && yarn lint",
+    "prepush": "yarn test",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "new": "cube-scripts generate-module"
+  },
+  "commitlint": {
+    "extends": [
+      "@cube/commitlint-config-cube"
+    ]
+  },
+  "workspaces": [
+    "ui",
+    "server"
+  ],
+  "engines": {
+    "node": ">=6",
+    "yarn": ">=1.0"
+  }
+}

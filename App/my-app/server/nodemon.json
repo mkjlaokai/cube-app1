@@ -1,0 +1,15 @@
+{
+  "verbose": false,
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "watch": [
+    "src/"
+  ],
+  "ignore": [
+    ".git",
+    ".idea",
+    "node_modules"
+  ],
+  "ext": "js"
+}

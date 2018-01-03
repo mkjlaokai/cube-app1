@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Demo Component should render correctly 1`] = `
+<div
+  className="demo"
+>
+  <div
+    className="demo-header"
+  >
+    <img
+      alt="logo"
+      className="demo-logo"
+      src="logo.svg"
+    />
+    <h2 />
+  </div>
+  <div
+    className="demo-content"
+  >
+    <div>
+      <h3>
+        counter:
+        0
+      </h3>
+    </div>
+    <div
+      className="demo-buttons"
+    >
+      <Button
+        clicked={false}
+        ghost={false}
+        icon="plus"
+        loading={false}
+        onClick={[Function]}
+        prefixCls="ant-btn"
+      />
+      <Button
+        className="demo-minus-count"
+        clicked={false}
+        ghost={false}
+        icon="minus"
+        loading={false}
+        onClick={[Function]}
+        prefixCls="ant-btn"
+      />
+    </div>
+    <div
+      className="demo-buttons"
+    >
+      <Button
+        clicked={false}
+        ghost={false}
+        loading={false}
+        onClick={[Function]}
+        prefixCls="ant-btn"
+        size="small"
+      />
+    </div>
+  </div>
+</div>
+`;

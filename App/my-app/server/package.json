@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Server project",
+  "main": "index.js",
+  "scripts": {
+    "build": "cube-scripts backend-build",
+    "lint": "cube-scripts backend-lint",
+    "start": "ALLOW_CONFIG_MUTATIONS=true cube-scripts backend-start",
+    "pretest": "yarn lint",
+    "test": "ALLOW_CONFIG_MUTATIONS=true CI=true cube-scripts test --env=node --colors"
+  },
+  "dependencies": {
+    "confidence": "^3.0.2",
+    "config": "^1.25.1",
+    "@cube/cube-base-api": "^0.2.6",
+    "glue": "^4.0.0",
+    "hoek": "^4.1.0",
+    "joi": "^10.0.5"
+  },
+  "devDependencies": {
+    "@cube/cube-scripts": "^0.16.0"
+  }
+}
